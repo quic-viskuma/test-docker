@@ -2,6 +2,7 @@ FROM ubuntu:24.04
 
 ENV ARCH=arm64
 ENV CROSS_COMPILE=aarch64-linux-gnu-
+ARG DEBIAN_FRONTEND=noninteractive
 
 COPY generate_bins.sh /usr/bin
 
