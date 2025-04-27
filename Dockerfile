@@ -5,7 +5,7 @@ ENV CROSS_COMPILE=aarch64-linux-gnu-
 
 COPY generate_bins.sh /usr/bin
 
-RUN apt-get update && \
+RUN apt-get update && apt-get install -y apt-utils && \
     apt-get install -y build-essential git clang-15 lld-15 flex bison bc libssl-dev curl kmod systemd-ukify rsync mtools dosfstools && \
     apt-get install -y gcc-aarch64-linux-gnu && \
     apt-get install -y python3-pip swig yamllint && \
