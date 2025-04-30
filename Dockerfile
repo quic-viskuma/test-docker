@@ -13,8 +13,8 @@ RUN apt-get install -y build-essential git clang-15 lld-15 flex bison bc libssl-
     apt-get install -y python3-pip swig yamllint && \
     apt install -y python3-setuptools python3-wheel && \
     apt install -y pipx && \
-    pipx install dtschema yq && \
-    pipx ensurepath && \
+    apt-get install -y yq && \
+    pipx install dtschema && \
     curl "https://android.googlesource.com/platform/system/tools/mkbootimg/+/refs/heads/android12-release/mkbootimg.py?format=TEXT" | base64 --decode > /usr/bin/mkbootimg && \
     chmod +x /usr/bin/mkbootimg && \
     chmod 755 /usr/bin/generate_bins.sh && \
