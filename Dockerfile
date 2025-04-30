@@ -6,7 +6,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 COPY generate_bins.sh /usr/bin
 
-RUN echo 'export PATH=$PATH:/root/.local/bin' >> ~/.bashrc && source ~/.bashrc
+RUN echo 'export PATH=$PATH:/root/.local/bin' >> ~/.bashrc && . ~/.bashrc
 
 RUN apt-get update && apt-get install -y apt-utils
 
