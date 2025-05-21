@@ -59,10 +59,6 @@ RUN apt-get update && apt install -y apt-transport-https \
 	zstd \
     && rm -rf -- /var/lib/apt/lists/*
 
-# Install docker
-COPY scripts/02*.sh .
-RUN bash -xe -- 02*.sh && rm -rf -- * && rm -rf -- /var/lib/apt/lists/*
-
 # Install Python packages
 RUN pip install --no-cache-dir requests kas==4.7
 
